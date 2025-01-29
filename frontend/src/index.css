@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-bg: #202430;
+  --secondary-bg: #ffffff;
+  --primary-button: #5a52ff;
+  --primary-button-hover: #3e3ae3;
+  --text-light: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Epilogue", serif;
+  margin: 0;
+  padding: 0;
+}

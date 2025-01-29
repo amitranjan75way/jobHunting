@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 
 const useStyle = (theme: Theme) => createStyles({
   root: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
     height: '100vh',
     width: '100vw',
     overflowX: 'hidden',
@@ -23,7 +23,6 @@ const Basic = () => {
     <Box sx={styles.root}>
       <Header/>
       <Outlet />
-      <Footer />
     </Box>
   );
 };

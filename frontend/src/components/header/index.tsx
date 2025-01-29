@@ -1,66 +1,27 @@
 import React from 'react';
-import style from './index.module.css';
-import logo from '../../accets/logo.jpg';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAppSelector, useAppDispatch } from '../../store/store';
-import { logout } from '../../store/reducers/authReducer';
-import { useLogoutUserMutation } from '../../services/userApi';
+import { Link } from 'react-router-dom';
+import styles from './index.module.css';
+import logo from '../../accets/Logo.png';
 
 const Header = () => {
-  const [logoutUser, { isLoading }] = useLogoutUserMutation();
-  const navigate = useNavigate();
-  const dispatch = useAppDispatch();
-  const { isAuthenticated, name } = useAppSelector((store) => store.auth);
-
-  const handleLogout = async() => {
-    try {
-      const response = await logoutUser();
-      console.log("User logout", response)
-      window.localStorage.removeItem('name');
-      window.localStorage.removeItem('email');
-      window.localStorage.removeItem('role');
-      window.localStorage.removeItem('accessToken');
-      window.localStorage.removeItem('refreshToken');
-      window.localStorage.removeItem('isAuthenticated');
-  
-      dispatch(logout());
-      navigate('/');
-      console.log(response);
-    } catch (error) {
-      console.log(error)
-    }
-   
-  };
-
   return (
-    <header className={style.header}>
-      <div className={style.logo} onClick={() => navigate('/')}>
-        <img src={logo} alt="FApp Logo" />
-        <h1>My App</h1>
+    <header className={styles.headerContainer}>
+      <div className={styles.header}>
+      <div className={styles.leftSection}>
+        <div className={styles.logo}>
+          <img src={logo} alt="JobHuntly Logo" className={styles.logoImg} />
+        </div>
+        <nav className={styles.navLinks}>
+          <Link to="/" className={styles.navLink}>Find Jobs</Link>
+          <Link to="/" className={styles.navLink}>Browse Companies</Link>
+        </nav>
       </div>
-      <nav className={style.nav}>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
-      <div className={style.actions}>
-        {isAuthenticated ? (
-          <>
-            <div className={style.profile} onClick={() => navigate('/profile')}>
-              <span className={style.userName}>{name}</span>
-              <i className="fas fa-user-circle" style={{ fontSize: '20px', marginLeft: '5px' }}></i>
-            </div>
-            <button className={style.logout} onClick={handleLogout}>Logout</button>
-          </>
-        ) : (
-          <>
-            <button className={style.login} onClick={() => navigate('/login')}>Login</button>
-            <button className={style.signup} onClick={() => navigate('/register')}>Sign Up</button>
-          </>
-        )}
+
+      <div className={styles.rightSection}>
+        <button className={styles.loginBtn}>Login</button>
+        <div className={styles.divider}></div>
+        <button className={styles.signupBtn}>Sign Up</button>
+      </div>
       </div>
     </header>
   );

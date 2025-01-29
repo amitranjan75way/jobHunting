@@ -1,0 +1,174 @@
+.heroSection {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  padding-top: 48px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.textContent {
+  max-width: 800px;
+}
+
+/* Title Image */
+.highlightImg {
+  width: 533px;
+  max-width: 100%;
+  height: 289.58px;
+}
+
+/* Subtitle */
+.subText {
+  font-family: Epilogue, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #b0b0b0;
+  margin-top: 20px;
+}
+
+/* Search Box */
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  width: 852px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  gap: 12px;
+}
+
+/* Input Field */
+.inputContainer {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  flex: 1;
+  border-radius: 8px;
+}
+
+.input {
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  flex: 1;
+  outline: none;
+  padding-left: 10px;
+}
+
+/* Location Selector */
+.locationContainer {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.location {
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  background: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+/* Icons */
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Search Button */
+.searchButton {
+  background-color: var(--primary-button);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+  background-color: var(--primary-button-hover);
+}
+
+.companycontainer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+.companyText {
+  opacity: 0.5;
+  color: white;
+  font-family: Epilogue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-bottom: 0.5rem;
+}
+
+.logocontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.companyLogo {
+  height: 32px;
+  gap: 0px;
+  opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .companyContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .companyLogo {
+    width: 100px;
+  }
+}
+
+/* Popular Jobs */
+.popularJobs {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #b0b0b0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 80px 30px;
+  }
+
+  .searchBox {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .inputContainer,
+  .locationContainer {
+    width: 100%;
+  }
+}

@@ -1,12 +1,15 @@
 import React from 'react'
 import style from './index.module.css';
+import HeroSection from '../../components/heroSection';
+import Category from '../../components/category';
 
 
 function Home() {
   return (
-    <>
-      <h1>hello this is amit</h1>
-    </>
+    <div className={style.homeContainer}>
+     <HeroSection/>
+     <Category/>
+    </div>
   )
 }
 
