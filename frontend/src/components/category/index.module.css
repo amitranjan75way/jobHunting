@@ -2,14 +2,14 @@
   max-width: 1120px;
   margin: 0 auto;
   padding: 5rem 0;
- 
 }
 
 .cardsContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 2rem 0;
+  gap: 32px;
+  padding-top: 48px;
 }
 
 .categoryHeader {
@@ -42,29 +42,34 @@
   text-decoration: none;
 }
 .arrowSign {
- height: 1.5rem;
- margin-left: 0.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 /* card css */
 .card {
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 24px;
   width: 250px;
+  height: 214px;
+  border: 1px;
+  background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: first baseline;
-  justify-content: space-between;
-  transition: box-shadow 0.3s ease-in-out;
-  margin-top: 2rem;
+  padding-left: 32px;
+  padding-top: 32px;
 }
 
 .card:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  background-color: #4640DE;
+  background-color: #4640de;
   color: white;
 }
+.card:hover .cardIcon path {
+  stroke: white; /* Change stroke color on hover */
+}
+
+
 
 .cardIcon {
   width: 48px;

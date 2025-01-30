@@ -19,7 +19,7 @@ const Category = () => {
       <div className={style.cardsContainer}>
         {jobsData &&
           jobsData.map((card, index) => {
-            return <Card key={index} icon={card.icon} title={card.title} job = { card.job } />
+            return <Card key={index} icon={card.icon} title={card.title} jobs = { card.jobs } />
         })
         }
       </div>
